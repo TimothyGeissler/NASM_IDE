@@ -22,6 +22,7 @@ def build():
 
 def run():
     print("Running executable: " + output_name + "\n")
+
     # print("gnome-terminal -- /bin/bash -c \"./" + output_name + ";bash\"")
     time.sleep(2)
     # gnome-terminal -x sh -c './built; exec bash'

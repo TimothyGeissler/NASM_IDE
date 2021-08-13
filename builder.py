@@ -21,11 +21,12 @@ def build():
 
 
 def run():
-    print("Running executable: " + output_name)
+    print("Running executable: " + output_name + "\n")
+    # print("gnome-terminal -- /bin/bash -c \"./" + output_name + ";bash\"")
     time.sleep(2)
-    # gnome-terminal -- /bin/bash -c "./built;bash"
-    call(["gnome-terminal", "--", "/bin/bash", "-c", "\"./" + output_name + ";bash\""])
-
+    # gnome-terminal -x sh -c './built; exec bash'
+    # call(["gnome-terminal", "-x", "-sh", "-c", "'./" + output_name + "; exec bash\'"])
+    call(["./" + output_name])
     menu()
 
 
